@@ -42,6 +42,31 @@ public class Friday {
 ----------------------------------------只能判断字符是两位的情况下的特殊情况，解决方法思考有问题--------------------------*/
 
 
+    /*解决方法进化：应该用循环的方法，从右往左把字符串遍历一遍，比大小来决定加减，这样就考虑到了超过两位字符的情况
+    public static void main(String[] args) {
+        Map<Character,Integer> map=new HashMap<>();
+        map.put('I',1);
+        map.put('V',5);
+        map.put('X',10);
+        map.put('L',50);
+        map.put('C',100);
+        map.put('D',500);
+        map.put('M',1000);
+        int num=0;
+        Scanner sc=new Scanner(System.in);
+        String s=sc.nextLine();
+        int pre=0;int cur=0;
+        for(int i=s.length()-1;i>=0;i--){
+            cur=map.get(s.charAt(i));
+            if(pre>cur)
+            { num-=cur;}
+            else
+            { num+=cur;}
+            pre=cur;
+        }
+        System.out.print(num);
+    }
 
+----------------------------------------------可以的可以的功夫不负有心人-------------*、
 
 }
